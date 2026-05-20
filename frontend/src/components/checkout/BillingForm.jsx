@@ -19,17 +19,21 @@ export function BillingForm({
   const citySelectOptions = cityOptions[values.state] ?? [{ value: '', label: 'Select city' }]
 
   return (
-    <Card className="px-4 py-5 sm:px-5 sm:py-6">
-      <button
-        type="button"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 transition-colors duration-200 hover:text-blue-600"
-      >
-        <ArrowLeftIcon className="h-4 w-4" />
-        <span>Back to plans</span>
-      </button>
+    <div>
+      <div className="mb-3">
+        <button
+          type="button"
+          onClick={onCancel}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 transition-colors duration-200 hover:text-blue-600"
+        >
+          <ArrowLeftIcon className="h-4 w-4" />
+          <span>Back to plans</span>
+        </button>
+      </div>
 
-      <div className="mt-4">
-        <h1 className="text-[24px] font-extrabold tracking-tight text-slate-900 sm:text-[26px]">Review your details</h1>
+      <Card className="px-4 py-5 sm:px-5 sm:py-6">
+        <div className="mt-4">
+        <h1 className="text-[26px] font-semibold tracking-tight text-slate-900">Review your details</h1>
         <p className="mt-2 text-[15px] font-bold text-slate-700">Billing Information</p>
       </div>
 
@@ -153,6 +157,7 @@ export function BillingForm({
           </Button>
         </div>
       </form>
-    </Card>
+      </Card>
+    </div>
   )
 }
