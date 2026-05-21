@@ -52,7 +52,7 @@ export function OrderSummary({
           variant="ghost"
           size="md"
           onClick={onUpgradePlan}
-          className="mt-3 w-full justify-center border border-blue-500 text-blue-600 hover:bg-blue-50"
+          className="mt-3 w-full justify-center rounded-full border border-blue-500 bg-blue-50 text-blue-600 hover:bg-blue-100"
         >
           <ArrowRightIcon className="h-4 w-4 rotate-180" />
           <span className="text-blue-600">Upgrade to Growth Plan</span>
@@ -72,10 +72,11 @@ export function OrderSummary({
                 <p className="text-xs text-slate-500">₹500.00 available</p>
               </div>
               <Button
-                variant={walletApplied ? 'secondary' : 'primary'}
+                variant="ghost"
                 size="md"
                 onClick={onToggleWalletApplied}
-                className="h-11 min-w-[84px] px-4"
+                className="h-11 min-w-[84px] px-4 border border-blue-500 bg-white text-[14px] font-bold font-inter hover:bg-blue-50"
+                style={{ color: '#1977F2' }}
               >
                 {walletApplied ? 'Applied' : 'Apply'}
               </Button>
@@ -98,7 +99,7 @@ export function OrderSummary({
               aria-expanded={couponOpen}
             >
               <div className="flex items-center gap-2.5">
-                <span className="grid h-9 w-9 place-items-center rounded-md bg-blue-50 text-blue-500">
+                <span className="grid h-9 w-9 place-items-center rounded-md text-slate-400">
                   <Tag className="h-4.5 w-4.5" />
                 </span>
                 <div>
@@ -126,7 +127,7 @@ export function OrderSummary({
                       className="h-11 border-gray-300 bg-white focus:border-blue-400"
                     />
                   </div>
-                  <Button variant="primary" size="md" onClick={onApplyCoupon} className="h-11 sm:min-w-[92px]">
+                  <Button variant="ghost" size="md" onClick={onApplyCoupon} className="h-11 sm:min-w-[92px] border border-blue-500 bg-white text-[14px] font-bold font-inter hover:bg-blue-50" style={{ color: '#1977F2' }}>
                     Apply
                   </Button>
                 </div>
@@ -185,7 +186,7 @@ export function OrderSummary({
                   <p className="mt-1 text-xs text-slate-500">Payable amount after discounts and tax.</p>
                 </div>
                 <p className="text-[22px] font-extrabold tracking-tight text-blue-600 sm:text-[24px]">
-                  {formatCurrency(totalDueToday)}
+                  {totalDueToday}
                 </p>
               </div>
             </div>

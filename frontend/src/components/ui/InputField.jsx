@@ -20,7 +20,7 @@ export const InputField = forwardRef(function InputField(
   return (
     <label className={cn('block', wrapperClassName)}>
       {hasLabel ? (
-        <span className="mb-2 block text-[12px] font-semibold text-slate-500">
+        <span className="mb-2 block text-[14px] font-medium font-inter text-label-text">
           {label}
           {required ? <span className="ml-0.5 text-rose-500">*</span> : null}
         </span>

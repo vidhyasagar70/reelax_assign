@@ -22,13 +22,13 @@ export function Navbar({ mobileMenuOpen, onToggleMobileMenu, onSearchChange, sea
       <div className="mx-auto flex w-full max-w-[1288px] items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <div className="hidden min-w-0 flex-1 md:block">
           <label className="relative block max-w-[355px]">
-            <SearchIcon className="pointer-events-none absolute left-3 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-slate-400" />
+            <SearchIcon className="pointer-events-none absolute right-3 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-slate-400" />
             <input
               value={searchQuery}
               onChange={(event) => onSearchChange(event.target.value)}
               type="search"
               placeholder={SEARCH_PLACEHOLDER}
-              className="h-10 w-full rounded-md border border-slate-200 bg-white pl-10 pr-4 text-sm text-slate-900 placeholder:text-slate-400 shadow-[0_1px_0_rgba(15,23,42,0.02)] transition-all duration-200 focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-100"
+              className="h-10 w-full rounded-md border border-slate-200 bg-white pl-4 pr-10 text-sm text-slate-900 placeholder:text-slate-400 shadow-[0_1px_0_rgba(15,23,42,0.02)] transition-all duration-200 focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-100"
             />
           </label>
         </div>
@@ -70,13 +70,13 @@ export function Navbar({ mobileMenuOpen, onToggleMobileMenu, onSearchChange, sea
         <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-sm md:hidden">
           <div className="mx-auto flex max-w-[1288px] flex-col gap-3">
             <label className="relative block">
-              <SearchIcon className="pointer-events-none absolute left-3 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-slate-400" />
+              <SearchIcon className="pointer-events-none absolute right-3 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-slate-400" />
               <input
                 value={searchQuery}
                 onChange={(event) => onSearchChange(event.target.value)}
                 type="search"
                 placeholder={SEARCH_PLACEHOLDER}
-                className="h-10 w-full rounded-md border border-slate-200 bg-white pl-10 pr-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-100"
+                className="h-10 w-full rounded-md border border-slate-200 bg-white pl-4 pr-10 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-100"
               />
             </label>
             <div className="grid grid-cols-2 gap-2">

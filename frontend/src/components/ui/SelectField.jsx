@@ -8,7 +8,7 @@ export const SelectField = forwardRef(function SelectField(
 ) {
   return (
     <label className={cn('block', wrapperClassName)}>
-      <span className="mb-2 block text-[12px] font-semibold text-slate-500">{label}</span>
+      <span className="mb-2 block text-[14px] font-medium font-inter text-label-text">{label}</span>
       <div className="relative">
         <select
           ref={ref}

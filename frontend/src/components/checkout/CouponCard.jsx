@@ -13,14 +13,6 @@ export function CouponCard({ coupon, icon: Icon, selected, applied, onSelect }) 
       )}
     >
       <div className="flex min-w-0 items-start gap-3">
-        <div
-          className={cn(
-            'grid h-9 w-9 shrink-0 place-items-center rounded-md border transition-colors duration-200',
-            selected || applied ? 'border-blue-200 bg-blue-50 text-blue-500' : 'border-slate-200 bg-slate-50 text-slate-400',
-          )}
-        >
-          <Icon className="h-4.5 w-4.5" />
-        </div>
         <div className="min-w-0">
           <div className="flex items-center gap-2">
             <span className="text-sm font-extrabold tracking-wide text-slate-900">{coupon.headline}</span>
